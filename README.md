@@ -3,12 +3,3 @@
 <p>Just some practice with some new libraries!</p>
 
 <p>Using Redux for state managment, using React Toastify for popup notifications.</p>
-
-1)
-~~~
-  yarn
-~~~
-2)
-~~~
-  yarn dev
-~~~
