@@ -1,36 +1,34 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addTodo } from '../redux/todoSlice';
+import { notifyAdded } from '../Toast';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AddTodoForm = () => {
 	const [value, setValue] = useState('');
-
 	const dispatch = useDispatch();
 
 	const onSubmit = (event) => {
 		event.preventDefault();
-		dispatch(addTodo({
-			title: value
-		}))
+		notifyAdded();
+		dispatch(
+			addTodo({
+				title: value,
+			})
+		);
 	};
 
 	return (
-		<form onSubmit={onSubmit}>
-
-			<label className='sr-only'>Name</label>
-			
-			<input
-				type='text'
-				placeholder='Add todo...'
-				value={value}
-				onChange={(event) => setValue(event.target.value)}
-			></input>
-
-			<button type='submit'>
-				Submit
-			</button>
-
-		</form> 	
+			<form onSubmit={onSubmit}>
+				<label>Name</label>
+				<input
+					type="text"
+					placeholder="Add todo..."
+					value={value}
+					onChange={(event) => setValue(event.target.value)}
+				></input>
+				<button type="submit">Submit</button>
+			</form>
 	);
 };
 
