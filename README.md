@@ -4,10 +4,11 @@
 
 <p>Using Redux for state managment, using React Toastify for popup notifications.</p>
 
-<ol>
-  <li>
-    ~~~
-      yarn
-    ~~~
-  </li>
-</ol>
+1)
+~~~
+  yarn
+~~~
+2)
+~~~
+  yarn dev
+~~~
